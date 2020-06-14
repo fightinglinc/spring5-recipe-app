@@ -36,7 +36,7 @@ public class ImageController {
     }
 
     @PostMapping("recipe/{id}/image")
-    public String handleImagePost(@PathVariable String id, @RequestParam("imagefile")MultipartFile file) {
+    public String handleImagePost(@PathVariable String id, @RequestParam("imagefile") MultipartFile file) {
         imageService.saveImageFile(Long.valueOf(id), file);
 
         return "redirect:/recipe/" + id + "/show";
@@ -50,7 +50,7 @@ public class ImageController {
             byte[] byteArray = new byte[recipeCommand.getImage().length];
             int i = 0;
 
-            for (Byte wrappedByte : recipeCommand.getImage()){
+            for (Byte wrappedByte : recipeCommand.getImage()) {
                 byteArray[i++] = wrappedByte; //auto unboxing
             }
 

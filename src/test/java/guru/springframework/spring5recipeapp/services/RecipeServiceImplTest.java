@@ -56,7 +56,7 @@ class RecipeServiceImplTest {
     }
 
     @Test
-    public void getRecipeByIdNotFound() throws Exception{
+    public void getRecipeByIdNotFound() throws Exception {
         Optional<Recipe> recipeOptional = Optional.empty();
         when(recipeRepository.findById(anyLong())).thenReturn(recipeOptional);
         // when
