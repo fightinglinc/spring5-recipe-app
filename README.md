@@ -7,3 +7,7 @@ Run the project in IDE or run this command and go to http://localhost:8080
 ```
 ./mvnw spring-boot:run
 ```
+
+## Screenshot
+
+![Index page](Index page.png)
